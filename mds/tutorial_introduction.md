@@ -2,7 +2,10 @@ About
 ---------
 I will walk you through the creation of a basic blog. A assume you already have Ringo installed. See [Getting Started] if you need help with that.
 
-The final, refined app developed in this tutorial is on github [http://github.com/oberhamsi/ringo-tutorial-demoblog](http://github.com/oberhamsi/ringo-tutorial-demoblog).
+Sources:
+
+  * [The app developed in this tutorial (final version)](http://github.com/oberhamsi/ringo-tutorial-demoblog).
+  * [The tutorial itself](http://github.com/oberhamsi/ringo-webtutorial)
 
 Help
 ------

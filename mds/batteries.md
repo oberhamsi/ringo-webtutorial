@@ -7,7 +7,7 @@ We will add a `toString` function to the Post protototype that will return a pre
 
     // model.js
     var dates = require('ringo/utils/dates');
-    Post.prototype.toString = function() {
+    exports.Post.prototype.toString = function() {
         return '[Post: ' + this.title + ' (' + this.author + ', ' +
             dates.format(this.createtime, 'dd.MM.yyyy') + ')]';
     };
