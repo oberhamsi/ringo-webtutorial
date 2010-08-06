@@ -3,6 +3,8 @@ var {createSkin} = require('ringo/skin');
 var strings = require('ringo/utils/strings');
 var objects = require('ringo/utils/objects');
 
+var outputPath = '../htdocs/';
+
 // input
 var sectionPath = join(module.directory, '../mds/');
 var toc = read(join(sectionPath, 'TOC'));
@@ -10,7 +12,7 @@ var toc = read(join(sectionPath, 'TOC'));
 // output
 var tocSkin = createSkin(read(join(module.directory, '../skins/toc.md')));
 var sectionSkin = createSkin(read(join(module.directory, '../skins/section.md')));
-var htdocsPath = join(module.directory, '../htdocs/');
+var htdocsPath = join(module.directory, outputPath);
 
 // collect sections to extend them with next/prev link 
 var sections = [];
