@@ -1,11 +1,11 @@
 Skins and Subskins
 ------
-Since we the "posts" array in our context, we could just put `<% posts %>` in the skin and it would output:
+Since we put the 'posts' array in our context, we could just put `<% posts %>` in the skin and it would output:
 
     // rendered skin output of <% posts %>
     [Post: Second Post (simon, 11.05.2010)], [Post: Introductory Post (simon, 11.05.2010)]
     
-.. the same string representation we get when issuing `posts` on the shell. But what we really want to do, is loop over each post in that array and render a piece of html. That is as simple as it sounds:
+.. the same string representation we would get with `print(posts)` on the shell. But what we really want to do, is loop over each post in that array and render a piece of html. That is as simple as it sounds:
 
     // in a skin
     <% for post in <% posts %> render 'postOverview' %>
@@ -13,7 +13,7 @@ Since we the "posts" array in our context, we could just put `<% posts %>` in th
     <% subskin 'postOverview' %>
     <h2><% post.title %></h2>
 
-This will render the subskin 'postOverview' for each post in posts. 'postOverview' is a template we re-use in each iteration to render the current post. The way we render 'postOverview' in the for-loop, it has access to the context variable 'post' and uses it to output `<% post.title %>`.
+This will render the subskin 'postOverview' for each post in posts. 'postOverview' is a template we re-use in each iteration to render the current post. The 'postOverview' subskin has access to the new context variable 'post' and uses it to output `<% post.title %>`.
 
 Subskins are an important concept in Ringo. A skin can have a lot of subskins, each of which starts with `<% subskin 'foobar' %>` and ends where the next subskin starts. 
 

@@ -1,7 +1,7 @@
 Update queries
 ----------------------
 
-Now we can more easily tell which Entity needs fixing. We query the Posts again but first reload the module by include'ing it again:
+Now we can more easily tell which Entity needs fixing. Before we query for the post we should reload the module by include'ing it again:
 
     >> include('model')
     >> Post.query().select()
