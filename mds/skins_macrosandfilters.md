@@ -8,3 +8,6 @@ The [Skins Demo](http://ringojs.org/demo/skins) also shows of some skin features
 FIXME 
   * were to configure macros (config.js array). they just something that is part of the skin context.
   * how to write macros & filter. at least 1 simple example for both.
+  * rip of old helma tutorials
+     * http://helma.org/wiki/New+Skin+Features+in+Helma+1.6/
+     * http://helma.org/Documentation/Request-Response-Cycle/#MacroHandlers
