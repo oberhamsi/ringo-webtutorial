@@ -1,7 +1,7 @@
 Configuring a Store
 -----------------
 
-By convention you should put all model code into `model.js`. Create that file now in your demoblog folder. We will put all data describing the models as well as any model behaviour into that module.
+By convention you should put all model code into `model.js`. Create that file now in your demoblog folder. We will put all data describing the models as well as any model behaviour into that module. For bigger apps you might want to consider a `model/` directory where each model gets its own module. For this tutorial a single `model.js` will do.
 
 We import the `config` module to get access to the store instance we setup earlier. The filestore, like every store, has the function `defineEntity()` which allows us to, well, define entities that can be put into or retrieved from the store. How many arguments and what kind of arguments `defineEntity()` accepts depends on the store implementation. The filestore only requires one argument: the name of the entity.
 
