@@ -4,8 +4,8 @@ I will walk you through the creation of a basic blog. A assume you already have 
 
 Sources:
 
-  * [The app developed in this tutorial (final version)](http://github.com/oberhamsi/ringo-tutorial-demoblog).
-  * [The tutorial itself](http://github.com/oberhamsi/ringo-webtutorial)
+  * [the demoblog developed (final version)](http://github.com/oberhamsi/ringo-tutorial-demoblog).
+  * [report issue with tutorial](http://github.com/oberhamsi/ringo-webtutorial/issues)
 
 Help
 ------
