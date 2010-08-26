@@ -15,11 +15,16 @@ To give you a taste: in case your using something like MySQL your model definiti
         }
     });
 
-.. and you would have to instantiate a different store in `config.js` namely Ringo's [Relational Store](http://github.com/robi42/ringo-hibernate/) which you can install with ringo-admin. See [How to install packages][Package_Management] if you need more help with that.
+.. and you would have to instantiate a different store in `config.js`  - you can currently choose between [ringo-sqlstore](http://github.com/grob/ringo-sqlstore) (a ORM written in javascript) and [ringo-hibernate](http://github.com/robi42/ringo-hibernate/) (which is built on top of <http://hibernate.org/>).
+
+You can install those with ringo-admin. See [How to install packages][Package_Management] if you need more help with that.
 
     $ ringo-admin install robi42/ringo-hibernate
+    $ ringo-admin install grob/ringo-sqlstore
 
-ringo-hibernate is work in progress and does not have much documentation. You can most easily find out what is currently possible by checking out [ringo-hiberante's unit tests](http://github.com/robi42/ringo-hibernate/blob/master/test/all.js).
+Both of them are work in progress and do not have much documentation, though they do comply to the evolving [Ringo store interface](http://ringojs.org/wiki/Storage/).
+
+[ringo-sqlstore's readme](http://github.com/grob/ringo-sqlstore/blob/master/README.md) gives you a starting point; and [ringo-hiberante's unit tests](http://github.com/robi42/ringo-hibernate/blob/master/test/all.js) will help you understand how it is different and what it's capable of.
 
 There are in fact other store implementation, check out the Database section in the [list of available packages for Ringo][Packages].
 
