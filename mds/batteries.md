@@ -14,5 +14,7 @@ We will add a `toString` function to the Post protototype that will return a pre
 
 Ringo ships with many useful modules. We have [JSON support](http://ringojs.org/api/master/core/json), a module for [file operations](http://ringojs.org/api/master/fs), a [unit testing framework](http://ringojs.org/api/master/assert) and more. Most of the interesting stuff is in the [ringo/](http://ringojs.org/api/master/) namespace.
 
+The global object holds a couple of useful [global functions]((http://ringojs.org/wiki/Global_Functions/) besides `require` and `import` we also have utilites to interface with Java.
+
 If you still do not find what you need maybe someone else has already written a packacke that might help you: [List of Ringo Packages](http://ringojs.org/wiki/Packages/).
 
