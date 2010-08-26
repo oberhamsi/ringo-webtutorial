@@ -29,7 +29,7 @@ Now we can start logging. And while we are at it we can finally fix `create.POST
         post.createtime = new Date();
         post.save();
         log.info('{} created by {}', post, user);
-        return response.redirectResponse('./edit/' + post._id);
+        return Response.redirect('./edit/' + post._id);
     };
     
 This will yield a log line like this:
