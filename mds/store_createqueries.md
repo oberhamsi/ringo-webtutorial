@@ -27,7 +27,7 @@ There is also a `remove()` function which drops the entity from the store, e.g.:
 
 Its usually nicer to pass the constructor an object holding all the properties you want stored:
 
-    >> var post = new Post({
+    >> var secondPost = new Post({
     ..          title: 'Second Post',
     ..          author: 'simon',
     ..          text: 'Follow up post in which i explain the first Post.',
