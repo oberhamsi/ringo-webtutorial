@@ -11,7 +11,7 @@ Note how we also unset the `req.session.message` in `Get.edit` - we do no want i
         // ...
         var message = req.session.data.message;
         req.session.data.message = "";
-        return response.skinResponse('skins/edit.html', {
+        return Response.skin('skins/edit.html', {
             post: post,
             message: message,
         });
@@ -20,7 +20,7 @@ Note how we also unset the `req.session.message` in `Get.edit` - we do no want i
         // ...
         post.save();
         req.session.data.message = "Successfully saved Post " + id;
-        return response.redirectResponse(req.path);
+        return Response.redirect(req.path);
     };
 
 Adding `<% message %>` to the `edit.html` skin is left as an exercise.

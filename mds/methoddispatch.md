@@ -15,13 +15,13 @@ So far we have only seen actions that are plain functions. Those plain functions
     exports.edit.GET = function edit(req, id) {
         // output the model data for displaying
         var post = model.Post.get(id);
-        return response.skinResponse('skins/edit.html', {
+        return Response.skin('skins/edit.html', {
             post: post,
         });
     };
     exports.edit.POST = function edit(req, id) {
         // TODO handle post data
-        return response.redirectResponse(req.path);
+        return Response.redirect(req.path);
     };
 
 The POST action so far only redirects back to the GET action. Let's first deal with the `edit.html` skin. It displays the form for the passed `post` object:

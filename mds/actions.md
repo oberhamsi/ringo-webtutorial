@@ -5,15 +5,19 @@ The current `index` function in `actions.js` only returns a static skin. We will
 
     var posts = model.Post.query().select().slice(0,10);
 
-After that we use `skinResponse()` to return the rendered html to the browser. `skinResponse()` expects two arguments: the path to the skin file to render and a object with arbitrary properties. We call the later the "skin context". All the properties defined in the skin context are available for scripting in the skin. I'll show you in a minute. But this is how our action, returning the rendered skin, looks like:
+We also import `ringo/webapp/response` to create the actual Response object the action returns. `Response` has various static helper functions to, for example, quickly return a rendered skin or do a redirect. See the [API docs on Response](http://ringojs.org/api/master/ringo/webapp/response/) for a complete list.
+
+In this case we use `Response.skin(skin, context)` to return the rendered html to the browser. `Response.skin(skin, context)` expects two arguments: the path to the skin file to render and a object with arbitrary properties. We call the later the "skin context".
+
+All the properties defined in the skin context are available for scripting in the skin. I'll show you in a minute. But this is how our action, returning the rendered skin, looks like:
 
     // actions.js
-    var response = require('ringo/webapp/response');
+    var {Response = require('ringo/webapp/response');
     var model = require('./model');
 
     exports.index = function index(req) {
         var posts = model.Post.query().select().slice(0,10);
-        return response.skinResponse('skins/index.html', {
+        return Response.skin('skins/index.html', {
             posts: posts,
         });
     };

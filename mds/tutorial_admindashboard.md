@@ -5,7 +5,7 @@ Manually hacking the Url to get into the admin interface is cumbersome. Let's bu
     // adminactions.js
     exports.index = function index(req) {
         var posts = model.Post.query().select();
-        return response.skinResponse('skins/adminindex.html', {
+        return Response.skin('skins/adminindex.html', {
             posts: posts,
         });
     };

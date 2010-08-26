@@ -19,7 +19,7 @@ So our `post` action looks like this. It gets the post with the right id, as pas
     // actions.js
     exports.post = function post(req, id) {
        var post = model.Post.get(id);
-       return response.skinResponse('skins/post.html', {
+       return Response.skin('skins/post.html', {
           post: post,
        });
      };
