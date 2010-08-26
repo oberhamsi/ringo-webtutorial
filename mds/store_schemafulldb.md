@@ -15,7 +15,7 @@ To give you a taste: in case your using something like MySQL your model definiti
         }
     });
 
-.. and you would have to instantiate a different store in `config.js`  - you can currently choose between [ringo-sqlstore](http://github.com/grob/ringo-sqlstore) (a ORM written in javascript) and [ringo-hibernate](http://github.com/robi42/ringo-hibernate/) (which is built on top of <http://hibernate.org/>).
+.. and you would have to instantiate a different store in `config.js`  - you can currently choose between [ringo-sqlstore](http://github.com/grob/ringo-sqlstore) (written in javascript using JDBC) and [ringo-hibernate](http://github.com/robi42/ringo-hibernate/) (which is built on top of <http://hibernate.org/>).
 
 You can install those with ringo-admin. See [How to install packages][Package_Management] if you need more help with that.
 
