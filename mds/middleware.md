@@ -4,20 +4,36 @@ For authentication we use Ringo's [basic auth middlware](http://ringojs.org/api/
 
     // config.js
     exports.middleware = [
-        'ringo/middleware/responselog',
-        'ringo/middleware/error',
-        'ringo/middleware/notfound',
-        'ringo/middleware/basicauth'
+       require('ringo/middleware/gzip').middleware,
+       require('ringo/middleware/etag').middleware,
+       require('ringo/middleware/static').middleware(module.resolve('public')),
+       require('ringo/middleware/responselog').middleware,
+       ... cut for clearity ...
     ];
 
-But that has no visible effect unless we also define a protected realm. In our case all backend Urls start with '/admin/' so that will be the realm, which only the user 'demoblog' with the password 'secret' can access. The passwords is given as a SHA1 hash. The final auth config looks like this:
+By convention every middleware module - like `ringo/midleware/basicauth` - exports a function named `middleware` which acts as the actual middleware function. BasicAuth is a special middleware as it needs a configuration object. Similar to the Static-Middldware which accepts the path it should serve statically.
+
+We have to setup an auth config object to pass to the middlware. In our case all backend Urls start with '/admin/' so that will be the realm, which only the user 'demoblog' with the password 'secret' can access. The passwords is given as a SHA1 hash. The final auth config looks like this:
 
     // config.js
-    exports.auth = {
+    var authConfig = {
         '/admin/': {
             blogadmin: "e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4" // "secret"
         }
     };
+
+Which we will put into action by passing it to the BasicAuth-middleware:
+
+    // config.js
+    exports.middleware = [
+        require('ringo/middleware/gzip').middleware,
+        require('ringo/middleware/etag').middleware,
+        require('ringo/middleware/static').middleware(module.resolve('public')),
+        require('ringo/middleware/responselog').middleware,
+        require('ringo/middleware/error').middleware,
+        require('ringo/middleware/notfound').middleware,
+        require('ringo/middleware/basicauth').middleware(authConfig),
+    ];
 
 You can create the SHA1 for a string with Ringo's `ringo/utils/strings` `digest()` method:
 
@@ -29,3 +45,4 @@ When you access any of the /admin/ Urls you should now get a basicauth prompt, t
 
 FIXME:
   * explain middleware in general, how to write one
+  * what does `middleware` function do -> it's a JSGI app

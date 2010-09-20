@@ -4,8 +4,8 @@ Our super simple URL mapping brought as far - with all the automatic parameter c
 
     // config.js
     exports.urls = [
-        ['/', './actions'],
-        ['/admin/', './adminactions']
+        ['/', require('./actions')],
+        ['/admin/', require('./adminactions')]
     ];
 
 That's it already. For the Url `/admin/create` to work we only need to add a `create` action in `adminactions.js` - will write that in the next section.

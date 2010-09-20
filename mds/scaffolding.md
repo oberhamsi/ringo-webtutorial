@@ -19,9 +19,9 @@ This will create the `demoblog` folder containing a functional - but not yet ver
 
  * `skins/` Put all your skins (templates) in here.
  
- * `static/` By default Ringo serves files from this directory under the URL /static/
+ * `public/` Ringo servers files in this directory as static content.
  
- * `config/` Holds jetty configuration files. Do not worry about those.
+ * `config/` Holds webserver configuration files. Do not worry about those.
  
 Calling `ringo main.js` will start a jetty webserver on your machine and you can view the demoblog app right away in your browser.
 
@@ -39,10 +39,8 @@ If the server did not start that is probably because the default port used by Ri
 
     // config.js
     exports.httpConfig = {
-        staticDir: 'static',
         port: '8787',
     };
 
-This is also where you can change the directory from which Ringo serves the static files - leave it as "static" for this tutorial.
 
 

@@ -5,7 +5,7 @@ Now the 'read more' href links to `/post/id` where `id` is the id of a post. We 
 
     // config.js
     exports.urls = [
-        ['/', './actions'],
+        ['/', require('./actions')],
     ];
 
 Ringo will convert the pattern string `'/'` into a Regex `/\/.*/`, and that particular Regex will match any request path. Ringo then takes the first part of the path - everything up to the first '/' - and searches for a function with that name in the specified module `actions`.
