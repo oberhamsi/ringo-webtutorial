@@ -22,5 +22,5 @@ The filestore is a schemaless store, which means we do not have to define in adv
     exports.Post = store.defineEntity('Post');
     exports.Comment = store.defineEntity('Comment');
 
-That's it. `defineEntity()` returns the constructor for the entities, which we in turn export so other modules can access them. We will later use the `Post` and `Comment` constructors to create Posts and Comments.
+That's it. `defineEntity()` returns the constructor for the entities, which we in turn export so other modules can access them. We will later use the `Post` and `Comment` constructors to create Posts and Comments. Those constructors returned by defineEntity also have functions for querying the models - we will look at them later.
 
