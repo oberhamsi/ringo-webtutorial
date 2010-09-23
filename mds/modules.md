@@ -30,7 +30,7 @@ Or - to keep your namespace clean - you can `require()` it and then access `add`
     >> foobar.add(3,4)
     7
 
-Another option is to use [destructuring assignment](https://developer.mozilla.org/en/New_in_JavaScript_1.7#Destructuring_assignment_(Merge_into_own_page.2fsection)) to extract exactly the properties you want from the module you require:
+Another option is to use [destructuring assignment](https://developer.mozilla.org/en/New_in_JavaScript_1.7) to extract exactly the properties you want from the module you require:
 
     >> var {add} = require('foobar');
     >> add(2,3)
