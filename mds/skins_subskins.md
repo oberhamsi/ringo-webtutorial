@@ -24,14 +24,14 @@ This is how it looks all together.
     // index.html
     <% extends ./base.html %>
     
-    <!-- we overwrite the 'content' subskin which was 
-         originally defined in base.html -->
+    //   we overwrite the 'content' subskin which was 
+    //   originally defined in base.html
 
     <% subskin content %>
     <% for post in <% posts %> render 'postOverview' %>
 
-    <!-- the 'postOverview' subskins is used by the for loop 
-         to render each post -->
+    //   the 'postOverview' subskins is used by the for loop 
+    //   to render each post
 
     <% subskin 'postOverview' %>
         <h2><% post.title %></h2>

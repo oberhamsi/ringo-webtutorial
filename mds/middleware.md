@@ -11,9 +11,9 @@ For authentication we use Ringo's [basic auth middlware](http://ringojs.org/api/
        ... cut for clearity ...
     ];
 
-By convention every middleware module - like `ringo/midleware/basicauth` - exports a function named `middleware` which acts as the actual middleware function. BasicAuth is a special middleware as it needs a configuration object. Similar to the Static-Middldware which accepts the path it should serve statically.
+By convention every middleware module - like `ringo/midleware/basicauth` - exports a function named `middleware` which acts as the actual middleware function. BasicAuth is a special middleware as it needs a configuration object. Similar to the Static-Middleware which accepts the path it should serve statically.
 
-We have to setup an auth config object to pass to the middlware. In our case all backend Urls start with '/admin/' so that will be the realm, which only the user 'demoblog' with the password 'secret' can access. The passwords is given as a SHA1 hash. The final auth config looks like this:
+We have to setup an auth config object to pass to the middleware. In our case all backend Urls start with '/admin/' so that will be the realm, which only the user 'demoblog' with the password 'secret' can access. The passwords is given as a SHA1 hash. The final auth config looks like this:
 
     // config.js
     var authConfig = {

@@ -33,7 +33,7 @@ The POST action so far only redirects back to the GET action. Let's first deal w
     <h1> Edit Post '<% post.title %>' </h1>
     <form name="blogpost" action="<% href %>" method="POST">
         <h3>Title<h3>
-        <input type="text" name="title" size="30" value="<% post.title %>"><br/>
+        <input type="text" name="title" size="30" value="<% post.title %>">
         <h3>Lead<h3>
         <textarea name="lead" cols="50" rows="5"><% post.lead %></textarea>
         <h3>Text</h3>

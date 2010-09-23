@@ -10,11 +10,11 @@ Now the 'read more' href links to `/post/id` where `id` is the id of a post. We 
 
 Ringo will convert the pattern string `'/'` into a Regex `/\/.*/`, and that particular Regex will match any request path. Ringo then takes the first part of the path - everything up to the first '/' - and searches for a function with that name in the specified module `actions`.
 
-That simple mechanism worked great for us so far because by default - if there is no path part, because the Url was "/" - Ringo looks for an "index" action and that is all we needed.
+That simple mechanism worked great for us so far because by default Ringo looks for an "index" action and that is all we needed.
 
-But how will the URL `/post/id` work? The first part is the action name: 'post'. Ringo will pass the rest of the URL - split by `/` - as parameters to the action. The action just has to accept the correct number of arguments: in this case only one argument, the id.
+But how will the URL `/post/id` work? The first part is the action name: 'post'. Ringo will pass the rest of the URL, split by `/` (slash), as parameters to the action. The action must accept the correct number of arguments: in this case only one argument, the id.
 
-So our `post` action looks like this. It gets the post with the right id, as passed to it as the second argument, and renders that post. This time we use the `get(id)` function of the entity to retrieve only the one post we care about. No need for `query()`.
+The `post` action below works like this: It gets the post with the right id, as passed to it as the second argument, and renders that post. This time we use the `get(id)` function of the entity to retrieve only the one post we care about. No need for `query()`.
 
     // actions.js
     exports.post = function post(req, id) {

@@ -24,6 +24,6 @@ All the properties defined in the skin context are available for scripting in th
 
 The skin can now access the "posts" array from the context and we will write the necessary view logic to render each post.
 
-This is a very simple action. Later we will look at an action in the admin section of the Blog which creates Posts. It will have to deal with the [Request](http://ringojs.org/api/master/ringo/webapp/request) object which is passed to every action as the first parameter `req`.
+This is a very simple action. Later we will look at an action in the admin section of the Blog which creates Posts. It will have to deal with the [Request](http://ringojs.org/api/master/ringo/webapp/request) object which is passed to every action as the first argument `req`.
 
 See the next section for what happens in the skin.
