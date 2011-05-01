@@ -20,20 +20,20 @@ Let's say every blog post should be reachable by a "read more" link (we will lat
 
     // index.html
     <% extends ./base.html %>
+
     <% subskin content %>
-    <% for post in <% posts %> render 'post' %>
+        <% for post in <% posts %> render 'post' %>
 
     <% subskin 'post' %>
-
-       <h2><% post.title %></h2>
-       <p>
-           <% post.createtime | dateFormat "dd.MM.yyyy" %>, <% post.author %>
-       </p>
-       <div>
-         <p>
-           <% post.lead %>
-         </p>
-         <a href="<% href post %>/<% post._id %>"> ...read more </a>
-       </div>
+        <h2><% post.title %></h2>
+        <p>
+            <% post.createtime | dateFormat "dd.MM.yyyy" %>, <% post.author %>
+        </p>
+        <div>
+            <p>
+                <% post.lead %>
+            </p>
+            <a href="<% href post %>/<% post._id %>"> ...read more </a>
+        </div>
 
 Now we get links like "/post/1/", "post/2/". In the next sections we will take care of handling those so they actually output the full post.
