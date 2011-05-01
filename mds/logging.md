@@ -10,8 +10,8 @@ Then in the `edit.POST` and `create.POST` actions we log which user updated what
 Because of the authbasic middleware we installed earlier the username must be in the header of every request. A small utility function in `adminactions.js` extracts the current user from the request. I copied this from `ringo/middleware/auth`:
 
     // adminactions.js
-    function authUser(req) {
-        var credentials = base64.decode(req.headers.authorization
+    function getAuthUser(req) {
+        var credentials = require('ringo/base64').decode(req.headers.authorization
                             .replace(/Basic /, '')).split(':');
         return credentials.length && credentials[0];
     }
@@ -19,7 +19,7 @@ Because of the authbasic middleware we installed earlier the username must be in
 Now we can start logging. And while we are at it we can finally fix `create.POST` to actually set the correct author. Note how we use `{}` (curly bracket pairs) for string replacement. The logger will replace the bracket pairs with the following arguments.
 
     // adminactions.js
-    exports.create.POST = function create(req) {
+    exports.create.POST = function(req) {
         var post = new model.Post();
         for each (var key in ['text', 'lead', 'title']) {
             post[key] = req.params[key];
@@ -32,7 +32,7 @@ Now we can start logging. And while we are at it we can finally fix `create.POST
         return Response.redirect('./edit/' + post._id);
     };
     
-This will yield a log line like this:
+Now, whenever you create a new post it will yield a log line like this to console:
 
-    8068446 [qtp1868018799-13] INFO  adminactions  - [Post: Second Post (simon, 04.08.2010)] updated by blogadmin
+    8068446 [qtp1868018799-13] INFO  adminactions  - [Post: Second Post (blogadmin, 04.08.2010)] created by blogadmin
 

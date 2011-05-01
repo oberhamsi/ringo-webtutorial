@@ -1,0 +1,38 @@
+Lazy Navigation. Open this file with Codebrowser (http://tibleiz.net/code-browser/).
+does nothing except simplify navigation for developer.
+
+mds
+#[l]:	tutorial_introduction.md:mds/tutorial_introduction.md
+	(Index)
+#[l]:	scaffolding.md:mds/scaffolding.md
+#[l]:	modules.md:mds/modules.md
+#[l]:	store_storeinstance.md:mds/store_storeinstance.md
+#[l]:	store_schemafulldb.md:mds/store_schemafulldb.md
+#[l]:	store_createqueries.md:mds/store_createqueries.md
+#[l]:	store_selectqueries.md:mds/store_selectqueries.md
+#[l]:	batteries.md:mds/batteries.md
+#[l]:	store_updatequeries.md:mds/store_updatequeries.md
+#[l]:	actions.md:mds/actions.md
+#[l]:	skins_subskins.md:mds/skins_subskins.md
+#[l]:	skins_macrosandfilters.md:mds/skins_macrosandfilters.md
+#[l]:	tutorial_needforurlmatching.md:mds/tutorial_needforurlmatching.md
+#[l]:	urlmatching_argumentscapture.md:mds/urlmatching_argumentscapture.md
+#[l]:	tutorial_roadmap.md:mds/tutorial_roadmap.md
+#[l]:	urlmatching_patterntomodule.md:mds/urlmatching_patterntomodule.md
+#[l]:	methoddispatch.md:mds/methoddispatch.md
+#[l]:	requestobject.md:mds/requestobject.md
+#[l]:	skins_ifmacro.md:mds/skins_ifmacro.md
+#[l]:	sessions.md:mds/sessions.md
+#[l]:	tutorial_admindashboard.md:mds/tutorial_admindashboard.md
+#[l]:	middleware.md:mds/middleware.md
+#[l]:	logging.md:mds/logging.md
+
+skins
+#[l]:	onepagewiki.md:skins/onepagewiki.md
+#[l]:	section.md:skins/section.md
+#[l]:	toc.md:skins/toc.md
+
+bin
+#[l]:	rendermds.js:bin/rendermds.js
+
+#[l]:readme.md:readme.md

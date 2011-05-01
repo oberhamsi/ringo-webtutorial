@@ -11,7 +11,7 @@ Since we put the 'posts' array in our context, we could just put `<% posts %>` i
     <% for post in <% posts %> render 'postOverview' %>
     
     <% subskin 'postOverview' %>
-    <h2><% post.title %></h2>
+        <h2><% post.title %></h2>
 
 This will render the subskin 'postOverview' for each post in posts. 'postOverview' is a template we re-use in each iteration to render the current post. The 'postOverview' subskin has access to the new context variable 'post' and uses it to output `<% post.title %>`.
 
@@ -22,17 +22,16 @@ The other use for subskins, besides loop rendering, is to overwrite a subskin of
 This is how it looks all together.
 
     // index.html
+    // Please remove comments.
     <% extends ./base.html %>
     
-    //   we overwrite the 'content' subskin which was 
-    //   originally defined in base.html
-
+    // we overwrite the 'content' subskin which was 
+    // originally defined in base.html
     <% subskin content %>
-    <% for post in <% posts %> render 'postOverview' %>
+        <% for post in <% posts %> render 'postOverview' %>
 
-    //   the 'postOverview' subskins is used by the for loop 
-    //   to render each post
-
+    // the 'postOverview' subskins is used by the for loop 
+    // to render each post
     <% subskin 'postOverview' %>
         <h2><% post.title %></h2>
         <p>
