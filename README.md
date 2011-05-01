@@ -1,12 +1,12 @@
 Create Md Files
 ------------------
-`bin/updatehtdocs.js` renders md files (prev/next links) and a toc (index.md) into htdocs path.
+`bin/rendermds.js` renders the markdown source files from the `md/` directory as pages for the ringo wiki into directory `htdocs/`.
 
-the source md files are in `mds/`.
+the ringo wiki uses markdown too, but this script adds headers and prev/next links to the raw content described in those files.
 
-special files: 
-   * `mds/TOC` for section order.
-   * `skins/` templates for final mds
+the order of the sections is defined by modifying `mds/TOC`.
+
+the templates used to render the resulting markdown can be found in `skins/`.
 
 TODO web app essential
 ------------------
@@ -33,4 +33,3 @@ one section = one simple concept
 if concept too complex:
   * only show & explain typical use case in tutorial
   * extra topic page
-
