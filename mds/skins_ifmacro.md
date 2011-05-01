@@ -4,23 +4,23 @@ Two things are annoying: both, the create and edit page, say 'Edit Post' at the 
 
     // edit.skin
     <% extends ./base.html %>
-
+    
     <% subskin content %>
-    <% if <% post %> render editHeader %>
-
-    <form name="blogpost" action="<% href %>" method="POST">
-        <h3>Title<h3>
-        <input type="text" name="title" size="30" value="<% post.title %>"><br/>
-        <h3>Lead<h3>
-        <textarea name="lead" cols="50" rows="5"><% post.lead %></textarea>
-        <h3>Text</h3>
-        <textarea name="text" cols="50" rows="20"><% post.text %></textarea>
-    <br/>
-    <input type="submit" name="Save" value="save"/>
-    </form>
-
+        <% if <% post %> render editHeader %>
+        // href macro without parameters links to _this_ document.
+        <form name="blogpost" action="<% href %>" method="POST">
+            <h3>Title<h3>
+            <input type="text" name="title" size="30" value="<% post.title %>"><br/>
+            <h3>Lead<h3>
+            <textarea name="lead" cols="50" rows="5"><% post.lead %></textarea>
+            <h3>Text</h3>
+            <textarea name="text" cols="50" rows="20"><% post.text %></textarea>
+            <br/>
+            <input type="submit" name="Save" value="save"/>
+        </form>
+    
     <% subskin editHeader %>
-    <h1> Edit Post '<% post.title %>' </h1>
+        <h1>Edit Post '<% post.title %>'</h1>
 
 This will do for now.
 

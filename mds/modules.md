@@ -4,7 +4,7 @@ JavaScript Modules
 Ringo follows the [CommonJs] Standard. You will first notice this when dealing with modules. There are multiple JavaScript module patterns out there but in RingoJs you should only use this one:
 
   * Every file is a module living in its own top-level scope. No special syntax needed.
-  * Attach to `exports` any functions or other properties a module should expose.
+  * Any function or other property, that you attach to `exports` in your module, should be exposed.
   * `require('foobar')` returns an object holding all exported properties of the module foobar.
   * `include('foobar')` brings all the exported properties of the module foobar into the including module (by convention: only use `include` in the shell)
 

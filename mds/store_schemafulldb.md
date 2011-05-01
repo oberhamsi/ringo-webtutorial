@@ -5,7 +5,8 @@ For a more traditional, schemafull store, like MySql, `model.js` would be the pl
 
 To give you a taste: in case your using something like MySQL your model definition will look more like the following:
 
-    // model.js (do not use this for tutorial. this is just an example)
+    // model.js
+    // (do not use this for tutorial. this is just an example)
     var Post = store.defineEntity('Post', {
         table: 'persons',
         properties: {
@@ -14,6 +15,7 @@ To give you a taste: in case your using something like MySQL your model definiti
             createtime: {type: 'timestamp', nullable: false},
         }
     });
+    exports.Post = Post;
 
 .. and you would have to instantiate a different store in `config.js`  - you can currently choose between [ringo-sqlstore](http://github.com/grob/ringo-sqlstore) (written in javascript using JDBC) and [ringo-hibernate](http://github.com/robi42/ringo-hibernate/) (which is built on top of <http://hibernate.org/>).
 
