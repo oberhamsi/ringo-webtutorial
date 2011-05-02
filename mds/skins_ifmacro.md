@@ -7,7 +7,6 @@ Two things are annoying: both, the create and edit page, say 'Edit Post' at the 
     
     <% subskin content %>
         <% if <% post %> render editHeader %>
-        // href macro without parameters links to _this_ document.
         <form name="blogpost" action="<% href %>" method="POST">
             <h3>Title<h3>
             <input type="text" name="title" size="30" value="<% post.title %>"><br/>

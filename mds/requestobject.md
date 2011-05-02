@@ -23,7 +23,7 @@ Finally we `save()` the modified post and redirect back to the `edit.GET` action
         return Response.redirect(req.path);
     };
 
-The `create` actions are even simpler. The `GET.create` function renders the `edit.html` skin like `edit.GET` does but without passing a post, thereby creating an empty form. And that's it:
+The `create` actions are even simpler. The `create.GET` function renders the `edit.html` skin like `edit.GET` does but without passing a post, thereby creating an empty form. And that's it:
 
     // adminactions.js
     exports.create = {};
@@ -31,7 +31,7 @@ The `create` actions are even simpler. The `GET.create` function renders the `ed
         return Response.skin('skins/edit.html');
     };
 
-The `POST.create` stores what properties it gets via `req.params` in a new `Post` object but also attaches the automatically created `author` and `createtime` properties. And finally, it redirects to the `edit.GET` action of the newly saved `Post`:
+The `create.POST` stores what properties it gets via `req.params` in a new `Post` object but also attaches the automatically created `author` and `createtime` properties. And finally, it redirects to the `edit.GET` action of the newly saved `Post`:
 
     // adminactions.js
     exports.create.POST = function(req) {
