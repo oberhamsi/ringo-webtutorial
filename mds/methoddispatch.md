@@ -35,6 +35,7 @@ The POST action so far only redirects back to the GET action. Let's first deal w
 
     <% subskin content %>
         <h1> Edit Post '<% post.title %>' </h1>
+        // href macro without parameters links to _this_ document.
         <form name="blogpost" action="<% href %>" method="POST">
             <h3>Title<h3>
             <input type="text" name="title" size="30" value="<% post.title %>">

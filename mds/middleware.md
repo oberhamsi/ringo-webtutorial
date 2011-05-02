@@ -7,7 +7,7 @@ For authentication we use Ringo's [basic auth middlware](http://ringojs.org/api/
        require('ringo/middleware/gzip').middleware,
        require('ringo/middleware/etag').middleware,
        require('ringo/middleware/static').middleware(module.resolve('public')),
-       require('ringo/middleware/responselog').middleware,
+       // require('ringo/middleware/responselog').middleware,
        ... cut for clearity ...
     ];
 

@@ -1,5 +1,5 @@
 Lazy Navigation. Open this file with Codebrowser (http://tibleiz.net/code-browser/).
-does nothing except simplify navigation for developer.
+The file does nothing except providing a simple navigation.
 
 mds
 #[l]:	tutorial_introduction.md:mds/tutorial_introduction.md
