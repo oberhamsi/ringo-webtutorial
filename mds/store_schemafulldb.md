@@ -3,7 +3,7 @@ Schemafull DBs - What about MySQL, PostgreSQL, etc.?
 
 For a more traditional, schemafull store, like MySql, `model.js` would be the place to setup the whole database mapping. Typically, you would map every table in your database to a store entity, and the fields of the table would map to properties of the entities.
 
-To give you a taste: in case your using something like MySQL your model definition will look more like the following:
+To give you a taste: in case your using something like MySQL your model definition would look more like the following:
 
     // model.js
     // (do not use this for tutorial. this is just an example)

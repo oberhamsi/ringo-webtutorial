@@ -1,5 +1,8 @@
 About
 ---------
+
+`This tutorial only works with RingoJs 0.7`
+
 I will walk you through the creation of a basic blog. A assume you already have Ringo installed. See [Getting Started] if you need help with that.
 
 Sources:
