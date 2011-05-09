@@ -19,7 +19,7 @@ This will create the `demoblog` folder containing a functional - but not yet ver
  * `public/` Ringo servers files in this directory as static content.
  * `config/` Holds webserver configuration files. Do not worry about those.
  
-Calling `ringo main.js` will start a development webserver, jetty, on your machine and you can view the demoblog app right away in your browser.
+Calling `ringo main.js` will start a development webserver, [jetty](http://en.wikipedia.org/wiki/Jetty_%28Web_server%29), on your machine and you can view the demoblog app right away in your browser.
 
     $ cd demoblog
     $ ringo main.js
@@ -28,18 +28,16 @@ This will start the server on [http://127.0.0.1:8080](http://127.0.0.1:8080).
 
 Under Linux instead of typing `ringo main.js` all the time you can start any web application with the `ringo-web` command. `config.js` must be in the directory from which you call `ringo-web`:
 
-    $ cd demoblog
     $ ringo-web
 
 If the server did not start that is probably because the default port used by Ringo (8080) is already in use. You can change the port in `config.js` by adding/modifing the `httpConfig.port` property:
 
     // config.js
     // NOTE: if you do copy&paste, please remove comments.
-    // Otherwise some examples (skins) will not work.
+    // Otherwise some examples will not work, in particular skins.
     
     exports.httpConfig = {
         port: '8787',
     };
-
 
 
